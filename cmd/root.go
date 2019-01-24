@@ -26,18 +26,18 @@ import (
 var cfgFile string
 
 // rootCmd represents the base command when called without any subcommands
-var rootCmd = &cobra.Command{
-	Use:   "hello",
-	Short: "A brief description of your application",
-	Long: `A longer description that spans multiple lines and likely contains
-examples and usage of using your application. For example:
+var rootCmd = newRootCmd()
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
-	// Uncomment the following line if your bare application
-	// has an action associated with it:
-	//	Run: func(cmd *cobra.Command, args []string) { },
+func newRootCmd() *cobra.Command {
+	return &cobra.Command{
+		Use:   "hello",
+		Short: "This is hello command",
+		Long:  `This is hello comand long long description`,
+		RunE: func(cmd *cobra.Command, args []string) error {
+			fmt.Println("world")
+			return nil
+		},
+	}
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
