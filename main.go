@@ -14,7 +14,7 @@
 
 package main
 
-import "hello/cmd"
+import "github.com/ken-aio/hello/cmd"
 
 func main() {
 	cmd.Execute()
