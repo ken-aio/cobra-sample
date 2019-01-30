@@ -14,7 +14,7 @@
 
 package main
 
-import "github.com/ken-aio/hello/cmd"
+import "github.com/ken-aio/cobra-sample/cmd"
 
 func main() {
 	cmd.Execute()
